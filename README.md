@@ -36,7 +36,7 @@
 
 <h3>Choisis un modèle :</h3>
 <div id="models">
-    <img src="[model1.png](https://www.bing.com/images/search?view=detailV2&ccid=ZPhBozlZ&id=A8729BA30C77E75E10D16990ECD056F2AAE0E235&thid=OIP.ZPhBozlZZKjZfHI9uIPiHwHaD5&mediaurl=https%3a%2f%2fstoryauth.com%2fwp-content%2fuploads%2f2024%2f07%2fPoki-Games-1.webp&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.64f841a3395964a8d97c723db883e21f%3frik%3dNeLgqvJW0OyQaQ%26pid%3dImgRaw%26r%3d0&exph=1080&expw=2048&q=poki&FORM=IRPRST&ck=044F3C88FF4C1D19794A64F500C4AF65&selectedIndex=1&itb=0&adlt=strict)" class="model-thumb" onclick="selectModel(1)">
+    <img src="[[model1.png](http://1.bp.blogspot.com/-DMBqlt1Mn-g/VIL_WFGreNI/AAAAAAADOF0/jrIx42p4hMI/s1600/clipart%2Bnavide%C3%B1os%2B(3)%2B(1).png)](https://www.bing.com/images/search?view=detailV2&ccid=ZPhBozlZ&id=A8729BA30C77E75E10D16990ECD056F2AAE0E235&thid=OIP.ZPhBozlZZKjZfHI9uIPiHwHaD5&mediaurl=https%3a%2f%2fstoryauth.com%2fwp-content%2fuploads%2f2024%2f07%2fPoki-Games-1.webp&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.64f841a3395964a8d97c723db883e21f%3frik%3dNeLgqvJW0OyQaQ%26pid%3dImgRaw%26r%3d0&exph=1080&expw=2048&q=poki&FORM=IRPRST&ck=044F3C88FF4C1D19794A64F500C4AF65&selectedIndex=1&itb=0&adlt=strict)" class="model-thumb" onclick="selectModel(1)">
     <img src="model2.png" class="model-thumb" onclick="selectModel(2)">
     <img src="model3.png" class="model-thumb" onclick="selectModel(3)">
     <img src="model4.png" class="model-thumb" onclick="selectModel(4)">
