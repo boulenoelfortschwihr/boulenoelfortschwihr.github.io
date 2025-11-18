@@ -1,111 +1,240 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Prévisualisation Boules de Noël</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boules de Noël – Informations</title>
+  <style>
     body {
-        font-family: Arial, sans-serif;
-        background: #f6f6f6;
-        padding: 20px;
-        text-align: center;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(180deg, #fff3f3, #ffe0e0);
+      margin: 0;
+      padding: 20px;
+      line-height: 1.7;
+      animation: fadeIn 1s ease-in-out;
     }
-    h1 { color: #c40028; }
-    #models { display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 20px; }
-    .model-thumb {
-        width: 120px;
-        margin: 10px;
-        cursor: pointer;
-        border: 2px solid transparent;
-        border-radius: 10px;
-        transition: 0.2s;
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
-    .model-thumb:hover { border-color: #c40028; }
-    .selected { border-color: #c40028 !important; }
-    canvas {
-        margin-top: 20px;
-        background: white;
-        box-shadow: 0 0 10px #0002;
-        border-radius: 10px;
+
+    h1 {
+      text-align: center;
+      color: #b30000;
+      font-size: 2.5rem;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      animation: slideDown 0.8s ease-out;
     }
-</style>
+
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    h2 {
+      color: #b30000;
+      border-bottom: 2px solid #d9a3a3;
+      padding-bottom: 5px;
+      margin-top: 30px;
+      font-size: 1.6rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffffdd;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      backdrop-filter: blur(6px);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .models {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .models img {
+      width: 100%;
+      border-radius: 14px;
+      border: 2px solid #e4c4c4;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .models img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+    }
+
+    .info {
+      margin-top: 35px;
+      padding: 22px;
+      background: #ffeaea;
+      border-left: 6px solid #b30000;
+      border-radius: 10px;
+      animation: fadeIn 1.4s ease-in-out;
+    }
+
+    footer {
+      text-align: center;
+      color: #555;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      padding: 20px;
+      background: #f7dede;
+      border-top: 3px solid #b30000;
+    }
+
+    footer p { margin: 4px 0; }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <div style="text-align:center; margin-bottom:25px; font-size:0.95rem; color:#444; background:#fceaea; padding:10px 15px; border-radius:10px; border:1px solid #e3b4b4; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+      <strong>Collège Alice Mosnier</strong><br>
+      Action solidaire menée par les élèves pour soutenir le financement de l'échange scolaire avec l'Allemagne.<br>
+      Merci pour votre soutien et votre participation ✨
+    </div>
+    <h1>Boules de Noël personnalisées</h1>
 
-<h1>Prévisualisation des Boules de Noël</h1>
+    <p>
+      Nous sommes heureux de vous présenter notre opération spéciale de <strong>Boules de Noël personnalisées</strong>, réalisée dans le cadre du financement de l’échange scolaire entre les élèves du Collège Alice Mosnier et nos partenaires allemands.
+      <br><br>
+      En achetant une boule, vous soutenez directement ce projet éducatif et culturel, qui permet aux élèves de vivre une expérience unique en Allemagne.
+      <br><br>
+      Les boules sont proposées par les élèves auprès de leur entourage : famille, amis, collègues… Elles constituent un cadeau idéal pour les fêtes et permettent d’impliquer les élèves dans une action concrète et solidaire.
+      <br><br>
+      Toutes les informations pratiques concernant la commande se trouvent au verso du flyer ou via le QR Code fourni.
+      <br><br>
+      Merci pour votre soutien — vous contribuez à rendre cet échange possible et inoubliable pour nos élèves !
+    </p>
 
-<h3>Choisis un modèle :</h3>
-<div id="models">
-    <img src="[model1.png](http://1.bp.blogspot.com/-DMBqlt1Mn-g/VIL_WFGreNI/AAAAAAADOF0/jrIx42p4hMI/s1600/clipart%2Bnavide%C3%B1os%2B(3)%2B(1).png)" class="model-thumb" onclick="selectModel(4)">
-    <img src="model2.png" class="model-thumb" onclick="selectModel(2)">
-    <img src="model3.png" class="model-thumb" onclick="selectModel(3)">
-    <img src="model4.png" class="model-thumb" onclick="selectModel(4)">
-    <img src="model5.png" class="model-thumb" onclick="selectModel(5)">
-    <img src="model6.png" class="model-thumb" onclick="selectModel(6)">
-    <img src="model7.png" class="model-thumb" onclick="selectModel(7)">
-    <img src="model8.png" class="model-thumb" onclick="selectModel(8)">
-    <img src="model9.png" class="model-thumb" onclick="selectModel(9)">
-</div>
+    <h2>Modèles disponibles</h2>
 
-<input id="nameInput" type="text" placeholder="Prénom à inscrire" oninput="updateCanvas()" style="padding:8px;font-size:18px; width:250px;">
-<br>
+    <div class="models">
+      <img src="model1.png" alt="Modèle 1" />
+      <img src="model2.png" alt="Modèle 2" />
+      <img src="model3.png" alt="Modèle 3" />
+      <img src="model4.png" alt="Modèle 4" />
+      <img src="model5.png" alt="Modèle 5" />
+      <img src="model6.png" alt="Modèle 6" />
+      <img src="model7.png" alt="Modèle 7" />
+      <img src="model8.png" alt="Modèle 8" />
+      <img src="model9.png" alt="Modèle 9" />
+    </div>
 
-<canvas id="preview" width="450" height="450"></canvas>
+    <div class="info">
+      <h3>Comment commander ?</h3>
+      <ul>
+        <li>Choisissez un ou plusieurs modèles parmi ceux présentés.</li>
+        <li>Pour les modèles personnalisables (1 à 8), notez le prénom à graver.</li>
+        <li>Remplissez le bon de commande fourni par les élèves.</li>
+        <li>Un seul chèque par famille (à l’ordre indiqué sur le flyer).</li>
+        <li>Date limite de commande : <strong>25 novembre</strong>.</li>
+      </ul>
+    </div>
 
-<br><br>
-<button onclick="downloadPNG()" style="padding:10px 20px;font-size:18px;background:#c40028;color:white;border:none;border-radius:8px;cursor:pointer;">
-    Télécharger l’aperçu
-</button>
+    <p style="text-align:center; margin-top:20px; color:#666; font-size:14px;">
+      Page d'information – plus de détails accessibles via le QR Code fourni.
+    </p>
+  </div>
 
-<script>
-let currentModel = 1;
-const canvas = document.getElementById("preview");
-const ctx = canvas.getContext("2d");
+  <p style="text-align:center; font-size:15px; color:#444; margin-top:25px;"><strong>Contactez-nous :</strong><br> par SMS au <strong>06 95 75 19 75</strong> ou au <strong>07 66 49 33 88</strong></p>
 
-function selectModel(n) {
-    currentModel = n;
+<footer>
+    <p>Document réalisé par les élèves dans le cadre du financement de l'échange scolaire au lac de Constance.</p>
+    <p>Collège Alice Mosnier – Tous droits réservés. Reproduction interdite.</p>
+  </footer>
+  <canvas id="snow" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999;"></canvas>
 
-    // Sélection visuelle
-    document.querySelectorAll('.model-thumb').forEach((el, i) => {
-        el.classList.toggle("selected", i === n - 1);
-    });
+  <script>
+    const canvas = document.getElementById('snow');
+    const ctx = canvas.getContext('2d');
+    let W, H;
 
-    // Désactiver le prénom pour le modèle 9
-    document.getElementById("nameInput").disabled = (n === 9);
+    function resize() {
+      W = canvas.width = window.innerWidth;
+      H = canvas.height = window.innerHeight;
+    }
+    resize();
+    window.onresize = resize;
 
-    updateCanvas();
-}
+    const flakes = [];
+    for (let i = 0; i < 120; i++) {
+      flakes.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: Math.random() * 3 + 1,
+        d: Math.random() + 1
+      });
+    }
 
-function updateCanvas() {
-    const img = new Image();
-    img.src = "model" + currentModel + ".png";
+    function drawFlakes() {
+      ctx.clearRect(0, 0, W, H);
+      ctx.fillStyle = 'white';
+      ctx.beginPath();
+      for (let f of flakes) {
+        ctx.moveTo(f.x, f.y);
+        ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+      }
+      ctx.fill();
+      updateFlakes();
+    }
 
-    img.onload = () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    function updateFlakes() {
+      for (let f of flakes) {
+        f.y += Math.pow(f.d, 2) + 1;
+        f.x += Math.sin(f.y / 20) * 0.6;
 
-        if (currentModel !== 9) {
-            ctx.font = "50px Arial";
-            ctx.fillStyle = "black";
-            ctx.textAlign = "center";
-            ctx.fillText(
-                document.getElementById("nameInput").value,
-                canvas.width / 2,
-                canvas.height * 0.82
-            );
+        if (f.y > H) {
+          f.y = -5;
+          f.x = Math.random() * W;
         }
-    };
-}
+      }
+    }
 
-function downloadPNG() {
-    const link = document.createElement('a');
-    link.download = "boule_noel.png";
-    link.href = canvas.toDataURL();
-    link.click();
-}
+    function loop(){ drawFlakes(); requestAnimationFrame(loop);} loop();
+  </script>
 
-selectModel(1);
-</script>
+  <!-- Sapin décoratif animé -->
+  
+
+  <style>
+    /* Sapin stylisé */
+    
+
+    /* Animation du sapin */
+     100%{transform:translateX(-50%);} }
+      50% { transform: translateX(-50%) rotate(1deg); }
+      100% { transform: translateX(-50%) rotate(-1deg); }
+    }
+
+    /* /* /* Sapin supprimé */ */ */
+    .container {
+      position: relative;
+      
+    }
+
+    
+
+    @keyframes blink {
+      0% { opacity: 0.4; }
+      100% { opacity: 1; }
+    }
+
+    /* Guirlandes lumineuses sur le sapin */
+    
+
+    
+      100% { filter: brightness(1.4); }
+    }
+  </style>
 
 </body>
 </html>
