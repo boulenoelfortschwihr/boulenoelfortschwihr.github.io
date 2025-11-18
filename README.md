@@ -118,15 +118,33 @@
     <h2>Modèles disponibles</h2>
 
     <div class="models">
-      <img src="model1.png" alt="Modèle 1" />
-      <img src="model2.png" alt="Modèle 2" />
-      <img src="model3.png" alt="Modèle 3" />
-      <img src="model4.png" alt="Modèle 4" />
-      <img src="model5.png" alt="Modèle 5" />
-      <img src="model6.png" alt="Modèle 6" />
-      <img src="model7.png" alt="Modèle 7" />
-      <img src="model8.png" alt="Modèle 8" />
-      <img src="model9.png" alt="Modèle 9" />
+      <img src="[model1.png](https://raw.githubusercontent.com/boulenoelfortschwihr/boulenoelfortschwihr.github.io/d0729f5cb5fea858026be9acd56e9868b93d77da/Boule1.jpg
+)<img width="956" height="21" alt="image" src="https://github.com/user-attachments/assets/9e7fa919-a145-4c2c-92e8-e3f51a9c0037" />
+" alt="Modèle 1" />
+      <img src="[model2.png](https://raw.githubusercontent.com/boulenoelfortschwihr/boulenoelfortschwihr.github.io/d0729f5cb5fea858026be9acd56e9868b93d77da/Boule2.jpg
+)<img width="956" height="21" alt="image" src="https://github.com/user-attachments/assets/5142e48c-c97a-4513-a97f-14bfe6420794" />
+" alt="Modèle 2" />
+      <img src="[model3.png](https://raw.githubusercontent.com/boulenoelfortschwihr/boulenoelfortschwihr.github.io/d0729f5cb5fea858026be9acd56e9868b93d77da/Boule3.jpg
+)<img width="956" height="21" alt="image" src="https://github.com/user-attachments/assets/9f72d386-0b40-4029-9634-97f57628da2d" />
+" alt="Modèle 3" />
+      <img src="[model4.png](https://raw.githubusercontent.com/boulenoelfortschwihr/boulenoelfortschwihr.github.io/d0729f5cb5fea858026be9acd56e9868b93d77da/Boule4.jpg
+)<img width="956" height="21" alt="image" src="https://github.com/user-attachments/assets/c6f7c6ed-508b-4c73-b5d8-f277137e26e5" />
+" alt="Modèle 4" />
+      <img src="[model5.png](https://raw.githubusercontent.com/boulenoelfortschwihr/boulenoelfortschwihr.github.io/d0729f5cb5fea858026be9acd56e9868b93d77da/Boule5.jpg
+)<img width="956" height="21" alt="image" src="https://github.com/user-attachments/assets/445b70a8-aaff-42f5-a936-92d00ef75858" />
+" alt="Modèle 5" />
+      <img src="[model6.png](https://raw.githubusercontent.com/boulenoelfortschwihr/boulenoelfortschwihr.github.io/d0729f5cb5fea858026be9acd56e9868b93d77da/Boule6.jpg
+)<img width="956" height="21" alt="image" src="https://github.com/user-attachments/assets/d990ad83-b633-40ff-97fd-14588cac3b65" />
+" alt="Modèle 6" />
+      <img src="[model7.png](https://raw.githubusercontent.com/boulenoelfortschwihr/boulenoelfortschwihr.github.io/d0729f5cb5fea858026be9acd56e9868b93d77da/Boule7.jpg
+)<img width="956" height="21" alt="image" src="https://github.com/user-attachments/assets/8dec99b3-80d1-4f40-b7df-38d798aa1afd" />
+" alt="Modèle 7" />
+      <img src="[model8.png](https://raw.githubusercontent.com/boulenoelfortschwihr/boulenoelfortschwihr.github.io/d0729f5cb5fea858026be9acd56e9868b93d77da/Boule8.jpg
+)<img width="956" height="21" alt="image" src="https://github.com/user-attachments/assets/ff7a8af5-8d2d-4b65-8c4e-b90adec1598a" />
+" alt="Modèle 8" />
+      <img src="[model9.png](https://raw.githubusercontent.com/boulenoelfortschwihr/boulenoelfortschwihr.github.io/d0729f5cb5fea858026be9acd56e9868b93d77da/Boule9.jpg
+)<img width="956" height="21" alt="image" src="https://github.com/user-attachments/assets/b502aeac-f98b-4885-acbc-7ec3a5460ab0" />
+" alt="Modèle 9" />
     </div>
 
     <div class="info">
@@ -137,6 +155,7 @@
         <li>Remplissez le bon de commande fourni par les élèves.</li>
         <li>Un seul chèque par famille (à l’ordre indiqué sur le flyer).</li>
         <li>Date limite de commande : <strong>25 novembre</strong>.</li>
+        <li>Date de récéptition des commandes la semaine du : <strong>15 au 19 décembre 2025<strong>.<li>
       </ul>
     </div>
 
